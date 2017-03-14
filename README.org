@@ -1,0 +1,32 @@
+#+TITLE: Joegle - Git Notes
+
+See /‡ README/ section (bottom) for install notes
+
+* Setup checklist
+  + [ ] Place key in github
+
+* Basics
+  + init a repo
+    : git init
+
+** Config
+   + List git aliases
+     : git config --get-regexp alias
+   + git lol alias
+     : git config --global --add alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all"
+     
+* Remotes
+  + change remote to ssh so that it doesnt ask for password
+    : git remote set-url origin  git@github.com:joegle/git-notes.git
+    + Stored in ~.git/config/~
+  + View existing remotes
+    : git remote -v
+
+* ‡ README 
+
+** Todo
+   + [ ] bash completion
+   + [ ] git prompt
+   + [ ] git so fancy
+   + [ ] add keys directions
+   + [ ] https://github.com/git-tips/tips
