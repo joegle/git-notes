@@ -8,13 +8,36 @@ See /‡ README/ section (bottom) for install notes
 * Basics
   + init a repo
     : git init
+  + [[https://steindom.com/articles/add-empty-directory-git-repository][Add empty folder]]
+    + Add .gitignore to folder with:
+      #+BEGIN_SRC 
+      *
+      !.gitignore
+      #+END_SRC
 
 ** Config
    + List git aliases
      : git config --get-regexp alias
    + git lol alias
      : git config --global --add alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all"
-     
+
+* Fixing  
+  + Remove every line from history matching sed
+    : git filter-branch --tree-filter 'sed -i "/sensitive information/ d" filename' -- --all
+    + if you know the first commit
+      : git filter-branch --tree-filter 'sed -i "/sensitive information/ d" filename' <commit>..HEAD
+  + Remove every line from history that has word
+    : git filter-branch --tree-filter "find . -type f -exec sed -i -e '/$*word/d' {} \;"
+  + change password in every commit to new string
+    :  git filter-branch --tree-filter "find . -type f -exec sed -i -e 's/originalpassword/newpassword/g' {} \;"
+  + check for data
+    : git filter-branch --tree-filter "grep -r originalpassword * || true"
+  + remove file from history
+    : git filter-branch -f --tree-filter 'rm -f full/path/file.js' HEAD
+  + Backs ups are in .git/refs/original and can be removed (just one or all refs)
+    : git update-ref -d refs/original/refs/heads/master
+    : git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d
+
 * Remotes
   + change remote to ssh so that it doesnt ask for password
     : git remote set-url origin  git@github.com:joegle/git-notes.git
