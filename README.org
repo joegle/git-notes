@@ -14,6 +14,8 @@ See /‡ README/ section (bottom) for install notes
       *
       !.gitignore
       #+END_SRC
+  + Unstage files
+    : git reset <filePath>
 
 ** Config
    + List git aliases
