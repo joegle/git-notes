@@ -4,6 +4,8 @@ See /‡ README/ section (bottom) for install notes
 
 * Setup checklist
   + [ ] Place key in github
+  + [ ] git lol
+  + [ ] https://github.com/kamranahmedse/git-standup
 
 * Basics
   + init a repo
@@ -39,6 +41,18 @@ See /‡ README/ section (bottom) for install notes
   + Backs ups are in .git/refs/original and can be removed (just one or all refs)
     : git update-ref -d refs/original/refs/heads/master
     : git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d
+  + Reattach head at point
+    : git checkout <sha>
+    : git branch my-new-branch -f
+
+* Mutating
+  + Pull versions of files from a branch
+    : git checkout branch path path path
+  + Add a file you forgot in the last commit
+    : git add file-that-i-forgot.txt
+    : git commit --amend --no-edit
+  + Put a commit "on top" of current point
+    : git rebase -i commit
 
 * Remotes
   + change remote to ssh so that it doesnt ask for password
