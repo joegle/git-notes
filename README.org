@@ -2,10 +2,17 @@
 
 See /‡ README/ section (bottom) for install notes
 
+* Inbox
+  + [ ] https://github.com/kamranahmedse/git-standup
+
 * Setup checklist
   + [ ] Place key in github
   + [ ] git lol
-  + [ ] https://github.com/kamranahmedse/git-standup
+
+* Comparing / Diff
+  + Diff what is staged
+    : git diff --staged
+  + 
 
 * Basics
   + init a repo
@@ -24,6 +31,14 @@ See /‡ README/ section (bottom) for install notes
      : git config --get-regexp alias
    + git lol alias
      : git config --global --add alias.lol "log --graph --decorate --pretty=oneline --abbrev-commit --all"
+
+* Branching
+  + create branch
+    : git branch <branch>
+  + delete branch
+    : git branch -d <branch>
+  + push branch and remember destination so you can just do 'git push' next time
+    : git push -u origin <branch>
 
 * Fixing  
   + Remove every line from history matching sed
@@ -47,12 +62,14 @@ See /‡ README/ section (bottom) for install notes
 
 * Mutating
   + Pull versions of files from a branch
-    : git checkout branch path path path
+    : git checkout branch -- path path path
   + Add a file you forgot in the last commit
     : git add file-that-i-forgot.txt
     : git commit --amend --no-edit
   + Put a commit "on top" of current point
     : git rebase -i commit
+  + delete file from git and disk
+    : git rm path
 
 * Remotes
   + change remote to ssh so that it doesnt ask for password
@@ -69,3 +86,4 @@ See /‡ README/ section (bottom) for install notes
    + [ ] git so fancy
    + [ ] add keys directions
    + [ ] https://github.com/git-tips/tips
+
