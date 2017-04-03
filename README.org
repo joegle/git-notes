@@ -12,7 +12,8 @@ See /‡ README/ section (bottom) for install notes
 * Comparing / Diff
   + Diff what is staged
     : git diff --staged
-  + 
+  + Diff between dates
+    : git diff [--stat] @{2017-03-01}..@{2017-04-01}
 
 * Basics
   + init a repo
