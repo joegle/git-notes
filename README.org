@@ -17,6 +17,8 @@ See /‡ README/ section (bottom) for install notes
   + Temporarily ignore changes in file (then undo)
     : git update-index --assume-unchanged <file>
     : git update-index --no-assume-unchanged <file>
+  + See what has changed 
+    : git log --since="1 week ago" --until="1 day ago" -p
 
 * Basics
   + init a repo
