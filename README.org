@@ -83,6 +83,12 @@ See /‡ README/ section (bottom) for install notes
   + View existing remotes
     : git remote -v
 
+* Syncing 
+  + List untracked files
+    : git ls-files . --exclude-standard --others
+  + List ignored files
+    : git ls-files . --ignored --exclude-standard --others
+      
 * ‡ README 
 
 ** Todo
