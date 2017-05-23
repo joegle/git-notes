@@ -88,6 +88,8 @@ See /‡ README/ section (bottom) for install notes
     : git ls-files . --exclude-standard --others
   + List ignored files
     : git ls-files . --ignored --exclude-standard --others
+  + Check if all branches are up to date with remote
+    : git remote -v update
       
 * ‡ README 
 
