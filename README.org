@@ -76,6 +76,9 @@ See /‡ README/ section (bottom) for install notes
   + delete file from git and disk
     : git rm path
 
+  + remove untracked files ([[https://stackoverflow.com/questions/1090309/git-undo-all-working-dir-changes-including-new-files][Reset directory to HEAD]])
+    : git clean -fd
+
 * Remotes
   + change remote to ssh so that it doesnt ask for password
     : git remote set-url origin  git@github.com:joegle/git-notes.git
