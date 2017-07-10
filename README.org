@@ -32,6 +32,11 @@ See /‡ README/ section (bottom) for install notes
   + Unstage files
     : git reset <filePath>
 
+  + [[https://stackoverflow.com/a/3320183/2180135][stop tracking a file]] (and start again)
+    : git update-index --assume-unchanged [<file> ...]
+    : git update-index --no-assume-unchanged [<file> ...]
+
+
 ** Config
    + List git aliases
      : git config --get-regexp alias
