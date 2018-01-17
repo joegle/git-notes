@@ -71,6 +71,8 @@ See /‡ README/ section (bottom) for install notes
   + Reattach head at point
     : git checkout <sha>
     : git branch my-new-branch -f
+  + [[https://help.github.com/articles/changing-author-info/][Renaming an author]]
+    + See [[file:scripts/git-author-rewrite.sh][git-author-rewrite.sh]]
 
 * Mutating
   + Pull versions of files from a branch
@@ -109,4 +111,5 @@ See /‡ README/ section (bottom) for install notes
    + [ ] git so fancy
    + [ ] add keys directions
    + [ ] https://github.com/git-tips/tips
+
 
